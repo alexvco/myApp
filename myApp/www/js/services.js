@@ -54,6 +54,10 @@ angular.module('starter.services', [])
 
     var Products = {
 
+      all: function(){
+        return products;
+      },
+
       saveProduct: function(product, image){
         var newProduct = {
           name: product.name,
@@ -62,7 +66,7 @@ angular.module('starter.services', [])
           price: product.price,
           image: image
         }; 
-        
+
         return products.$add(newProduct).then(function(){
           console.log('added to database');
         })
