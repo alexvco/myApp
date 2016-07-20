@@ -1,35 +1,37 @@
 'use strict';
 
-app.controller('LoginCtrl', function($scope, $ionicPopup){
+app.controller('LoginCtrl', function($scope, $state, $ionicPopup){
   $scope.emailLogin = function(){
     console.log('button was clicked on login');
-      $scope.data = {};
+      $scope.user = {};
+      console.log('showing popup');
 
       // An elaborate, custom popup
       var myPopup = $ionicPopup.show({
         templateUrl: 'templates/partials/_login.html',
-        title: 'Enter Wi-Fi Password',
-        subTitle: 'Please use normal things',
+        title: 'Signin',
         scope: $scope,
         buttons: [
-          { text: 'Cancel' },
           {
-            text: '<b>Save</b>',
-            type: 'button-positive',
-            onTap: function(e) {
-              if (!$scope.data.wifi) {
-                //don't allow the user to close unless he enters wifi password
-                e.preventDefault();
-              } else {
-                return $scope.data.wifi;
-              }
+            text: '<b>Login</b>',
+            type: 'button-energized',
+            onTap: function(user) {
+              user = $scope.user;
+                console.log('the user is ', user);
+                  // log user in
+                  $state.go('tab.dash');
+                  // send them to dashboard
+            }
+          },
+          {
+            text: '<b>Register</b>',
+            type: 'button-calm',
+            onTap: function(user) {
+              user = $scope.user;
+                console.log('the user is ', user);
             }
           }
         ]
-      });
-
-      myPopup.then(function(res) {
-        console.log('Tapped!', res);
       });
 
       // $timeout(function() {
