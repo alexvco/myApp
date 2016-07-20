@@ -7,7 +7,7 @@ app.controller('LoginCtrl', function($scope, $ionicPopup){
 
       // An elaborate, custom popup
       var myPopup = $ionicPopup.show({
-        template: '<input type="password" ng-model="data.wifi">',
+        templateUrl: 'templates/partials/_login.html',
         title: 'Enter Wi-Fi Password',
         subTitle: 'Please use normal things',
         scope: $scope,
