@@ -1,6 +1,6 @@
-angular.module('starter.services', [])
+'use strict';
 
-.factory('Chats', function() {
+app.factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -47,31 +47,4 @@ angular.module('starter.services', [])
       return null;
     }
   };
-})
-  .factory('Products', function(FURL, $firebaseArray) {
-    var ref = new Firebase(FURL);
-    var products = $firebaseArray(ref.child('products'));
-
-    var Products = {
-
-      all: function(){
-        return products;
-      },
-
-      saveProduct: function(product, image){
-        var newProduct = {
-          name: product.name,
-          tagline: product.tagline,
-          description: product.description,
-          price: product.price,
-          image: image
-        }; 
-
-        return products.$add(newProduct).then(function(){
-          console.log('added to database');
-        })
-      }
-
-    };
-    return Products;
-  });
+}) 
