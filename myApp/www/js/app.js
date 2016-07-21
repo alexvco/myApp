@@ -90,6 +90,7 @@ var app = angular.module('starter', [
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  // $urlRouterProvider.otherwise('/login');       just for now until google fixes AUTH SDK
+  $urlRouterProvider.otherwise('/tab/dash');
 
 });
