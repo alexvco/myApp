@@ -11,7 +11,7 @@
 }
 
 .loginForm .loginInput{
-  padding-left: 20px;
+   border: none; padding-left: 20px;
 }
 
 .ion-images:before {
@@ -40,3 +40,19 @@ div.item.item-divider.title h2 {
 div .item.item-image.choice {
   padding: 5%;
 }
+
+.item.item-input.inputUpload {
+  border: none;
+}
+
+.item.item-input.inputUploadTop {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border-top: darkgrey solid 1px;
+}
+
+
+
+
+
