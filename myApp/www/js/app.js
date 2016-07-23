@@ -7,7 +7,8 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', [
   'ionic',
-  'firebase'
+  'firebase',
+  'ngCordova'
 ])
 
 .run(function($ionicPlatform) {
