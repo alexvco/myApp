@@ -69,6 +69,15 @@ var app = angular.module('starter', [
         }
       }
     })
+  .state('tab.photo-detail', {
+      url: '/photo/detail',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/photo-detail.html',
+          controller: 'PhotoDetailCtrl'
+        }
+      }
+    })
   .state('tab.photo', {
       url: '/photo',
       views: {
