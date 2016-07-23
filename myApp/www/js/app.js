@@ -69,6 +69,15 @@ var app = angular.module('starter', [
         }
       }
     })
+  .state('tab.photo', {
+      url: '/photo',
+      views: {
+        'tab-photo': {
+          templateUrl: 'templates/tab-photo.html',
+          controller: 'PhotoCtrl'
+        }
+      }
+    })
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
